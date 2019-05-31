@@ -1,0 +1,47 @@
+.section-contacts {
+  margin-bottom: 80px;
+  @include media768 {
+    margin-bottom: 60px;
+  }
+}
+.contacts {
+  display: flex;
+  justify-content: center;
+  @include media768 {
+    flex-direction: column;
+  } 
+  &__item {
+    padding-left: 50px;
+    margin-right: 50px;    
+    position: relative;
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+    @include media768 {
+      margin-right: 0;
+      margin-bottom: 50px;      
+    } 
+    &--address::before, &--phone::before, &--time::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: $blue url("/images/mark.svg") no-repeat 50% 50%/22px 22px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      @include media768 {
+        width: 35px;
+        height: 35px;
+      } 
+    }
+    &--phone::before {
+      background: $green url("/images/phone.svg") no-repeat 50% 50%/20px 20px;
+    }
+    &--time::before {
+      background: $red url("/images/clock.svg") no-repeat 50% 50%/22px 22px;
+    }
+  }  
+}

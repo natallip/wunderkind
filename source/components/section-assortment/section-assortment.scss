@@ -1,0 +1,96 @@
+.section-assortment {
+  margin-bottom: 150px;
+  @include media1200 {
+    margin-bottom: 100px;
+  }
+  @include media768 {
+    margin-bottom: 80px;
+  }
+}
+.assortment {
+  position: relative;
+  padding: 0 50px;
+  @include media768 {
+    padding: 0 10px;
+  }
+  &__item {
+    box-shadow: 0 0 5px #eee;
+    border: 1px solid #eee;
+    margin: 5px;
+    background: #fff;
+    padding: 20px;    
+    @include media768 {
+      padding: 10px;
+    }
+  }
+  &__img {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 10px;    
+    @include media768 {
+      height: 220px;
+    }
+  }
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    width: 30px;
+    height: 30px;
+    background: $green;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    position: relative;
+    flex-shrink: 0;
+    &:hover {
+      transform: scale(1.1);
+      background: $yellow;
+    }
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: #fff;      
+    }
+  }
+}
+
+.section-assortment #assortment.owl-carousel.owl-theme .owl-nav .owl-prev, .section-assortment #assortment.owl-carousel.owl-theme .owl-nav .owl-next {
+  span {
+    display: none;
+  }
+  width: 80px;
+  height: 40px;
+  background: url("/images/arrow.svg") no-repeat center/80px 40px;
+  outline: none;
+  position: absolute;
+  top: 40%;
+  right: -25px;
+  &:hover {
+    opacity: 0.8;
+  }
+  
+  @include media768 {
+    right: -40px;
+  } 
+}
+.section-assortment #assortment.owl-carousel.owl-theme .owl-nav .owl-prev {
+  transform: rotate(180deg);
+  left: -25px;
+  @include media768 {
+    left: -40px;
+  } 
+}
+ 
+.section-assortment #assortment.owl-carousel.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: $red;
+}
+.section-assortment #assortment.owl-carousel.owl-theme .owl-dots .owl-dot span, .owl-theme .owl-dots .owl-dot:hover span {
+  width: 15px;
+  height: 15px;
+}  

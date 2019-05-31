@@ -1,0 +1,22 @@
+.section-about { 
+  padding: 80px 0 0;
+  margin-bottom: 150px; 
+  @include media768 {
+    margin-bottom: 80px;
+    padding-top: 60px;
+  }
+  p {
+    text-align: center;
+    width: 70%;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0 auto;
+    @include media768 {
+      width: 100%;
+    }
+  }
+  @include media1200 {
+    padding-top: 60px;
+    margin-bottom: 100px;
+  }
+} 

@@ -1,0 +1,13 @@
+mixin footer
+	footer.footer
+		.container
+			+popup
+			h2.title Остались вопросы?
+			form.form#form(action="mail.php")
+				input.form__input(type="text", name="name", placeholder="Ваше имя")
+				input.form__input(type="email", name="email", placeholder="Ваш e-mail")
+				textarea.form__text(placeholder="Сообщение", name="text")
+				input.form__submit(type="submit" value="Отправить")
+				.form__info Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.
+				.copyright Магазин "Вундеркинд" &copy; 2019
+	 

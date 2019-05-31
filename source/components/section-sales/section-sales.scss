@@ -1,0 +1,51 @@
+.section-sales {
+  margin-bottom: 150px;
+  @include media1200 {
+    margin-bottom: 100px;  
+  } 
+  @include media768 {
+    margin-bottom: 80px;
+  }
+}
+.sales {
+  &__item {
+    display: flex;
+    @include media1200 {
+      flex-direction: column;
+    }
+  }
+  &__img {
+    height: 250px;
+    width: auto;
+    flex-shrink: 0;
+    margin-right: 50px;
+    @include media1200 {
+      height: 200px;
+      max-width: 300px;
+      margin: 0 auto 30px;
+    }
+    @include media768 {
+      height: 180px;
+      max-width: 280px;
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    font-family: 'Open Sans ExtraBold';
+    font-size: 20px;
+    margin-bottom: 20px;
+    @include media768 {
+      font-size: 16px;
+    }
+  }
+  &__subtitle {
+    font-family: 'Open Sans Bold';
+    font-size: 18px;
+    @include media768 {
+      font-size: 16px;
+    }
+  }
+  &__text {
+    line-height: 1.4;
+  }
+}

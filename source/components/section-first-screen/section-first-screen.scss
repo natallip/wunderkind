@@ -1,0 +1,95 @@
+.section-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-first-screen {  
+  height: calc(100vh - 80px);
+  background: url("/images/top.jpg") no-repeat center/cover;
+  @include media768 {
+    height: calc(100vh - 178px);  
+  }
+  &__wrap {
+    display: inline-block;
+    background: rgba(#fff, .8);
+    max-width: 500px;
+    padding: 30px 60px;
+    position: relative; 
+    transform: translateY(20vh);  
+    &:before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      border: 3px dashed $yellow;
+    }
+    @include media768 {
+      max-width: 300px;
+      padding: 20px;
+    }
+  }
+  &__title {
+    font-size: 50px;
+    font-family: 'Arimo Bold';  
+    text-align: center;  
+    @include media768 {
+      font-size: 30px;
+    }
+  }
+}  
+.section-info {
+  background: $grey;
+  padding: 20px 0;
+  min-height: 80px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.info {
+  display: flex;
+  justify-content: center;
+  @include media768 {
+    flex-direction: column;      
+  } 
+  &__item {
+    padding-left: 100px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #b4b2b3;
+    padding-right: 50px;
+    min-height: 40px;
+    &:last-child {
+      border: none;
+    }
+    @include media768 {
+      margin: 15px 0;  
+      border: none;    
+    }
+    &--since::before, &--assortment::before, &--sales::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50px;
+      transform: translateY(-50%);
+      background: url("/images/calendar.svg") no-repeat 50% 50%/35px 35px;
+      width: 40px;
+      height: 40px;
+      @include media768 {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    &--assortment::before {
+      background: url("/images/puzzle-piece.svg") no-repeat 50% 50%/35px 35px;
+    }
+    &--sales::before {
+      background: url("/images/sales.svg") no-repeat 50% 50%/35px 35px;
+    }
+  }
+}

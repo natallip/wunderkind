@@ -1,0 +1,19 @@
+extends static/pug/template
+include components/components
+
+block variables
+    - var title = 'Вундеркинд'
+    - var description = 'description'
+    - var keywords = 'keywords'
+
+block content
+
+    div.page__wrapper#fullpage
+        +section-first-screen
+        +section-about
+        +section-assortment
+        +section-news
+        +section-sales
+        +section-contacts
+        +section-map
+        +footer

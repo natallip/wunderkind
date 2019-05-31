@@ -1,0 +1,12 @@
+mixin section-assortment
+	section.section-assortment#section-assortment
+		.container
+			h2.title Ассортимент 
+			#assortment.assortment.owl-carousel.owl-theme
+				each item in data.assortment
+					.assortment__item.item
+						.assortment__img(style="background-image:url(images/"+ item.img + ")")
+						.assortment__wrap
+							.assortment__btn
+								+svg("right-arrow")
+							.assortment__category= item.text   
